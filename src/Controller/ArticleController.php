@@ -15,4 +15,15 @@ class ArticleController
     {
         return new Response("This is my first PHP page!");
     }
+
+    /**
+     * @Route("/news/{slug}")
+     */
+    public function show($slug)
+    {
+        return new Response(sprintf(
+            "Future page to show cool article: %s",
+            $slug
+        ));
+    }
 }
