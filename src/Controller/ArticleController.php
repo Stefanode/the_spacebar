@@ -6,6 +6,7 @@ use Michelf\MarkdownInterface;
 use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Cache\Adapter\AdapterInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
@@ -23,7 +24,7 @@ class ArticleController extends AbstractController
     /**
      * @Route("/news/{slug}", name="article_show")
      */
-    public function show($slug, MarkdownInterface $markdown)
+    public function show($slug, MarkdownInterface $markdown, AdapterInterface $cache)
     {
         $comments = [
             'I ate a normal rock once. It did NOT taste like bacon!',
@@ -48,7 +49,12 @@ cow est ribeye adipisicing. Pig hamburger pork belly enim. Do porchetta minim ca
 fugiat.
 EOF;
 
-        $articleContect = $markdown->transform($articleContect);
+        $item = $cache->getItem("markdown_".md5($articleContect));
+        if (!$item->isHit()) {
+            $item->set($markdown->transform($articleContect));
+            $cache->save($item);
+        }
+        $articleContect = $item->get();
 
         return $this->render('article/show.html.twig', [
             'title' => ucwords(str_replace('-', ' ', $slug)),
