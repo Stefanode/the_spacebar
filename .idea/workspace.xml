@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80c3a4fd-204b-46a3-ad30-d754a3d66bce" name="Default" comment="Security checker added to composer">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticleController.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
@@ -86,8 +84,8 @@
       <file leaf-file-name="framework.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="522">
+              <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -316,7 +314,7 @@
       <workItem from="1523894557537" duration="141000" />
       <workItem from="1523965608588" duration="11940000" />
       <workItem from="1524137550673" duration="278000" />
-      <workItem from="1524214709217" duration="2674000" />
+      <workItem from="1524214709217" duration="2858000" />
     </task>
     <task id="LOCAL-00001" summary="Article controller build">
       <created>1523969415040</created>
@@ -357,7 +355,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13062000" />
+    <option name="totallyTimeSpent" value="13246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1094" height="1050" extended-state="0" />
@@ -510,8 +508,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="522">
+          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="32" />
         </state>
       </provider>
     </entry>
