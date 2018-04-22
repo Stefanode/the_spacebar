@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Service\MarkdownHelper;
 use Michelf\MarkdownInterface;
 use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -24,7 +25,7 @@ class ArticleController extends AbstractController
     /**
      * @Route("/news/{slug}", name="article_show")
      */
-    public function show($slug, MarkdownInterface $markdown, AdapterInterface $cache)
+    public function show($slug, MarkdownInterface $markdown, AdapterInterface $cache, MarkdownHelper $markdownHelper)
     {
         $comments = [
             'I ate a normal rock once. It did NOT taste like bacon!',
@@ -48,13 +49,12 @@ strip steak pork belly aliquip capicola officia. Labore deserunt esse chicken lo
 cow est ribeye adipisicing. Pig hamburger pork belly enim. Do porchetta minim capicola irure pancetta chuck
 fugiat.
 EOF;
-        
-        $item = $cache->getItem("markdown_".md5($articleContect));
-        if (!$item->isHit()) {
-            $item->set($markdown->transform($articleContect));
-            $cache->save($item);
-        }
-        $articleContect = $item->get();
+
+        $articleContect = $markdownHelper->parse(
+            $articleContect,
+            $cache,
+            $markdown
+        );
 
         return $this->render('article/show.html.twig', [
             'title' => ucwords(str_replace('-', ' ', $slug)),
