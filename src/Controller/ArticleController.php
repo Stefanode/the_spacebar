@@ -11,6 +11,13 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ArticleController extends AbstractController
 {
+    private $isDebug;
+
+    public function __construct(bool $isDebug)
+    {
+        $this->isDebug = $isDebug;
+    }
+
     /**
      * @Route("/", name="app_homepage")
      */
