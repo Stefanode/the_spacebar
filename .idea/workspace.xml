@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80c3a4fd-204b-46a3-ad30-d754a3d66bce" name="Default" comment="Security checker added to composer" />
+    <list default="true" id="80c3a4fd-204b-46a3-ad30-d754a3d66bce" name="Default" comment="Security checker added to composer">
+      <change beforePath="$PROJECT_DIR$/src/Command/ArticleStatsCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/ArticleStatsCommand.php" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
     <ignored path="$PROJECT_DIR$/vendor/doctrine/cache/" />
@@ -81,7 +83,11 @@
       </file>
       <file leaf-file-name="ArticleStatsCommand.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Command/ArticleStatsCommand.php">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name=".env" pinned="false" current-in-tab="false">
@@ -172,6 +178,7 @@
         <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/src/Controller/ArticleController.php" />
         <option value="$PROJECT_DIR$/config/packages/nexy_slack.yaml" />
+        <option value="$PROJECT_DIR$/src/Command/ArticleStatsCommand.php" />
       </list>
     </option>
   </component>
@@ -380,7 +387,7 @@
       <workItem from="1523894557537" duration="141000" />
       <workItem from="1523965608588" duration="11940000" />
       <workItem from="1524137550673" duration="278000" />
-      <workItem from="1524214709217" duration="9356000" />
+      <workItem from="1524214709217" duration="10265000" />
     </task>
     <task id="LOCAL-00001" summary="Article controller build">
       <created>1523969415040</created>
@@ -421,7 +428,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19744000" />
+    <option name="totallyTimeSpent" value="20653000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1094" height="1050" extended-state="0" />
@@ -641,7 +648,11 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Command/ArticleStatsCommand.php">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
